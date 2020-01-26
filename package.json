@@ -8,7 +8,9 @@
     "cover": "tap test/*.test.js --cov --coverage-report=lcov",
     "tap": "tap test/*.test.js --cov -R spec",
     "test": "yarn tap",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "lint": "eslint --ext js ./lib/**/*.js ./cli/**/*.js",
+    "lint-fix": "eslint --fix --ext js ./lib/**/*.js ./cli/**/*.js"
   },
   "keywords": [
     "mobile",
@@ -55,6 +57,13 @@
     "inliner": "cli/index.js"
   },
   "devDependencies": {
+    "eslint": "6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "2.20.0",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-standard": "4.0.1",
     "ghooks": "^2.0.4",
     "semantic-release": "^15.14.0",
     "st": "^2.0.0",
