@@ -111,6 +111,7 @@ test('inliner fixtures', function fixtureTests(t) {
             error.message += ' @ ' + basename;
             return reject(error);
           }
+
           t.equal(html.trim(), results[i].trim(), basename + ' matches');
           debug('result', html.trim());
           // debug('expected', results[i].trim());
